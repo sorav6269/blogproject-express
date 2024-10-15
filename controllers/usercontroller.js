@@ -25,9 +25,9 @@ class UserController {
             } else {
                 if (password == cpassword) {
                     const file = req.files.image
-                    const uploadImage = await cloudinary.uploader.upload
-                        (
-                            file.tempFilePath, { timeout: 120000 }, {
+                    const uploadImage = await cloudinary.uploader.upload(
+                        file.tempFilePath, {
+                            timeout: 120000,
                             folder: "userimage"
                         })
                     const hashPassword = await bcrypt.hash(password, 10)
@@ -46,7 +46,10 @@ class UserController {
                  
                 //  console.log(userdata)
                 if(userdata){
-                    const token = jwt.sign({ID: userdata._id},"pnidnfmsfhd7327632nsx7")
+                    const token = jwt.sign(
+                      { ID: userdata._id },
+                      "pnidnfmsfhd7327632nsx7"
+                    );
                     // console.log(token)
                     res.cookie("token",token)
                     this.sendVerifymail(name, email,userdata._id)
@@ -82,7 +85,10 @@ class UserController {
                 if (isMatch) {
                     //admin login
                     if (user.role == "admin") {
-                        let token = jwt.sign({ ID: user.id }, 'pnidnfmsfhd7327632nsx7');
+                        let token = jwt.sign(
+                          { ID: user.id },
+                          "pnidnfmsfhd7327632nsx7"
+                        );
                         // console.log(token)
                         res.cookie('token', token)
 
@@ -90,7 +96,7 @@ class UserController {
 
                     }
                     if (user.role == "user"  && user.status == "approved") {
-                        let token = jwt.sign({ ID: user.id }, 'pnidnfmsfhd7327632nsx7');
+                        let token = jwt.sign({ ID: user.id }, '');
                         // console.log(token)
                         res.cookie('token', token)
                         res.redirect('/admin/dashboard')

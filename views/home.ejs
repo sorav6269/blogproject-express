@@ -60,7 +60,7 @@
                         <img src="<%=item.image.url %>" alt="no-b" height="200">
 
                         <div class="card-body">
-                            <p>Abhi , <%= item.createdAt.toLocaleDateString() %></p>
+                            <p> <%= item.createdAt.toLocaleDateString() %></p>
                             <h4><%=item.title %></h4>
                             <p><%=item.description.slice(0,90) %></p>
                             <a href="/details/<%=item.id%>" class="btn btn-danger btn-lg mt-5">Read more...</a>

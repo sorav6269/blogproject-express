@@ -27,9 +27,9 @@ const BlogSchema = mongoose.Schema({
     status:{
         type:String,
         default:"0"
-    }
+    },
 
-}, { timestamps: true })
+}, {timestamps: true })
 
 const BlogModel = mongoose.model('blog', BlogSchema)
 

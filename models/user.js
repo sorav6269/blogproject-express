@@ -46,7 +46,7 @@ type:String
     is_verified:{
         type:Number,
         default:0
-    }
+    },
 
 }, { timestamps: true })
 

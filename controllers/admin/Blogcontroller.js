@@ -26,12 +26,13 @@ class Blogcontroller {
             // console.log(req.files.image)
             // image uplaod
             const file = req.files.image
-            const uploadImage = await cloudinary.uploader.upload
-                (
-                    file.tempFilePath, { timeout: 120000 }, {
-                    folder: "blogImage"
-                }
-                )
+            const uploadImage = await cloudinary.uploader.upload(
+              file.tempFilePath,
+              {
+                timeout: 120000,
+                folder: "blogImage",
+              }
+            );
             console.log(uploadImage)
 
             const { category, title, description,role } = req.body
