@@ -50,12 +50,12 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                     <% c.forEach((item)=>{ %>
+                                     <% c.forEach((item,index)=>{ %>
                                     <tr>
-                                        <td><%= item.id %></td>
+                                        <td><%= index+1 %></td>
                                         <td><%= item.name %></td>
                                         <td>
-                                            <a href="/admin/categoryView/<%= item.id %>" class="btn btn-info">View</a>
+                                            <!-- <a href="/admin/categoryView/<%= item.id %>" class="btn btn-info">View</a> -->
                                             <a href="/admin/categoryEdit/<%= item.id %>" class="btn btn-info">Edit</a>
                                             <a href="/admin/categoryDelete/<%= item.id %>" class="btn btn-info">Delete</a>
                                         </td>

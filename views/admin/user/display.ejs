@@ -46,10 +46,10 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <% u.forEach((item)=>{ %>
+                                <% u.forEach((item,index)=>{ %>
                                     <tr>
                                         <td>
-                                            <%= item.id %>
+                                            <%= index+1 %>
                                         </td>
                                         <td>
                                             <%= item.name %>
@@ -70,7 +70,7 @@
                                             </form>
                                         </td>
                                         <td>
-                                            <a href="/admin/userView/<%= item.id %>" class="btn btn-info">View</a>
+                                            <!-- <a href="/admin/userView/<%= item.id %>" class="btn btn-info">View</a> -->
 
                                             <a href="/admin/userDelete/<%= item.id %>" class="btn btn-info">Delete</a>
                                         </td>
