@@ -52,14 +52,15 @@
                                 </div>
                                 <div class="from-group">
                                   <label for="">description</label>
-                                  <textarea name="description" class="form-control">
+                                  <textarea name="description" class="form-control" style="height: 200px;">
                                     <%= e.description %>
                                   </textarea>
                                 </div>
                                 <div class="from-group">
                                   <label for="">image</label>
                                   <input type="file" name="image" class="form-control">
-                                  <img src="<%= e.image.url %>" alt="" width="100">
+                                  <br>
+                                  <img src="<%= e.image.url %>" alt="" width="300" height="150">
                                 </div>
                                 <br>
                                 <button type="submit" class="btn btn-info">Update</button>

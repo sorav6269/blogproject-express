@@ -48,7 +48,7 @@ class UserController {
                 if(userdata){
                     const token = jwt.sign(
                       { ID: userdata._id },
-                      "pnidnfmsfhd7327632nsx7"
+                      "dgkdjfgsrgkdfjgfsd"
                     );
                     // console.log(token)
                     res.cookie("token",token)
@@ -87,7 +87,7 @@ class UserController {
                     if (user.role == "admin") {
                         let token = jwt.sign(
                           { ID: user.id },
-                          "pnidnfmsfhd7327632nsx7"
+                          "dgkdjfgsrgkdfjgfsd"
                         );
                         // console.log(token)
                         res.cookie('token', token)

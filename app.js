@@ -5,8 +5,7 @@ const app = express()
 const port = 3000
 const web = require('./routes/web')
 const connect = require('./db/connectDB')
-const fileUpload=require('express-fileupload')
-
+const fileUpload = require('express-fileupload')
 //connect flash and sessions 
 const session= require('express-session')
 const flash= require('connect-flash');

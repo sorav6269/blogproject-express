@@ -51,9 +51,9 @@
                 </thead>
 
               <tbody>
-                <% b.forEach((item)=>{ %>
+                <% b.forEach((item,index)=>{ %>
                <tr>
-                <td><%= item.id %></td>
+                <td><%= index+1 %></td>
                 <td><%= item.category %></td>
                 <td><%= item.title %></td>
                 <td><%= item.description.slice(0,90) %></td>
@@ -105,7 +105,7 @@
                       <select class="form-control" name="category" id="">
                         <option value="">select category</option>
                         <% c.forEach((item)=>{ %>
-                        <option value="<%= item.name %>"><%= item.name %></option>
+                        <option value="<%= item.category %>"><%= item.name %></option>
                         <% }) %>
                       </select>
                      

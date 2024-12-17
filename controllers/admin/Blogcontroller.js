@@ -4,9 +4,9 @@ const CategoryModel = require('../../models/category')
 const cloudinary = require('cloudinary')
 
 cloudinary.config({
-    cloud_name: 'dyblatmzo',
-    api_key: '757875579268529',
-    api_secret: 'OaD3lbfPxv_CrCd-pcIFiOtlDKw' // Click 'View Credentials' below to copy your API secret
+  cloud_name: "dwovzxxol",
+  api_key: "227631891845838",
+  api_secret: "10e8e5f8f10025a319af64255cf401", // Click 'View Credentials' below to copy your API secret
 });
 
 class Blogcontroller {
@@ -28,9 +28,9 @@ class Blogcontroller {
             const file = req.files.image
             const uploadImage = await cloudinary.uploader.upload(
               file.tempFilePath,
+                { timeout: 120000 },
               {
-                timeout: 120000,
-                folder: "blogImage",
+                  folder: "blogImage",
               }
             );
             console.log(uploadImage)
@@ -97,6 +97,7 @@ class Blogcontroller {
                 })
                 
                 var data = {
+                    name:req.body.category,
                     title: req.body.title,
                     description: req.body.description,
                     image: {
