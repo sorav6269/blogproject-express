@@ -6,7 +6,7 @@ const cloudinary = require('cloudinary')
 cloudinary.config({
   cloud_name: "dwovzxxol",
   api_key: "227631891845838",
-  api_secret: "10e8e5f8f10025a319af64255cf401", // Click 'View Credentials' below to copy your API secret
+  api_secret: "fF1pNSbC9dBhtUDQr5XEbkErkww", // Click 'View API Keys' above to copy your API secret
 });
 
 class Blogcontroller {
